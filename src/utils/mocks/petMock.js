@@ -1,10 +1,9 @@
 import { faker } from '@faker-js/faker';
-//https://github.com/jmSilva83/1raPreentregaBackend3
 
-export const generatePets = (numPets) => {
+const generatePets = (quantity) => {
     const pets = [];
 
-    for (let i = 0; i < numPets; i++) {
+    for (let i = 0; i < quantity; i++) {
         const specie = faker.helpers.arrayElement([
             'dog',
             'cat',
@@ -39,6 +38,9 @@ export const generatePets = (numPets) => {
         pets.push(pet);
     }
 
-    console.log('Generated pets:', pets);
+    console.log('Mascotas generadas:', pets);
     return pets;
 };
+
+export default generatePets
+ 
