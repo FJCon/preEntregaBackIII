@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 
-const generatePets = (quantity) => {
+const petsGenerator = (quantity) => {
     const pets = [];
 
     for (let i = 0; i < quantity; i++) {
@@ -42,5 +42,5 @@ const generatePets = (quantity) => {
     return pets;
 };
 
-export default generatePets
+export default petsGenerator
  

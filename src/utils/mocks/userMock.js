@@ -1,10 +1,10 @@
 import bcrypt from 'bcrypt';
 import { faker } from '@faker-js/faker';
 
-export const generateUsers = (numUsers) => {
+const usersGenerator = (quantity) => {
     const users = [];
 
-    for (let i = 0; i < numUsers; i++) {
+    for (let i = 0; i < quantity; i++) {
         const user = {
             first_name: faker.person.firstName(),
             last_name: faker.person.lastName(),
@@ -19,3 +19,5 @@ export const generateUsers = (numUsers) => {
 
     return users;
 };
+
+export default usersGenerator
