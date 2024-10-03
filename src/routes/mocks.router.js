@@ -16,7 +16,7 @@ router.get("/mockingpets", (req, res) =>{
 })
 
 router.get("/mockingusers", (req, res) =>{
-    const pets = usersGenerator(50);
+    const users = usersGenerator(50);
     res.status(200).json(users);
 })
 
