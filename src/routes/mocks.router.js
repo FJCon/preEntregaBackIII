@@ -1,4 +1,5 @@
 import { Router } from "express";
+import ErrorMessages from '../utils/errorMessages.js'
 
 import petsGenerator from "../utils/mocks/petMock.js"
 import usersGenerator from "../utils/mocks/userMock.js"
@@ -24,7 +25,8 @@ router.post('/generateData', async (req, res) => {
     const { usersQuanty, petsQuantity } = req.body;
 
     if(!usersQuanty || !petsQuantity) {
-       return res.status(400).json({information: 'You must speficy both number of users and pets to generate'});
+
+       return res.status(ErrorMessages.GENERATE_DATA_INVALID_INPUT.status).json({information: ErrorMessages.GENERATE_DATA_INVALID_INPUT.message});
     }
 
     try{
