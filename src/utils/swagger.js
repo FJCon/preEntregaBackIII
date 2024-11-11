@@ -1,4 +1,5 @@
 import { dirname } from "path"
+import __dirname from "./index.js"
 
 const swaggerOptions = {
     definition:{
@@ -8,7 +9,7 @@ const swaggerOptions = {
             description:"API pensada para los endpoints de Adoptame"
         }
     },
-    apis:[`${dirname}/docs/**/*.yaml`]
+    apis:[`${dirname(__dirname)}/docs/**/*.yaml`]
 }
 
 export default swaggerOptions

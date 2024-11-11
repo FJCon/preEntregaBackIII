@@ -1,0 +1,9 @@
+paths:
+  api/pets/:
+    get:
+      summary: Obtiene todos las mascotas
+      responses:
+        "200":
+          description: Las mascotas fueron obtenidos satisfactoriamente desde la base de datos
+        "500":
+          description: Error iterno del servidor. Query defectuosa o fallo de conexión
