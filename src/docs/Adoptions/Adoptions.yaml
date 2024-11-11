@@ -1,9 +1,11 @@
 paths:
-  /api/pets/:
+  /api/adoptions/:
     get:
+      tags:
+        - Adoptions
       summary: Obtiene todos las adopciones
       responses:
         "200":
-          description: Las madopciones fueron obtenidos satisfactoriamente desde la base de datos
+          description: Las adopciones fueron obtenidos satisfactoriamente desde la base de datos
         "500":
           description: Error iterno del servidor. Query defectuosa o fallo de conexión

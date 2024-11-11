@@ -1,6 +1,8 @@
 paths:
-  api/pets/:
+  /api/pets/:
     get:
+      tags:
+        - Pets
       summary: Obtiene todos las mascotas
       responses:
         "200":

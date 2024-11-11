@@ -1,6 +1,8 @@
 paths:
-  api/users/:
+  /api/users/:
     get:
+      tags:
+        - Users
       summary: Obtiene todos los usuarios
       responses:
         "200":
