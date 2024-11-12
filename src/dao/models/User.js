@@ -24,6 +24,14 @@ const schema = new mongoose.Schema({
         type:String,
         default:'user'
     },
+    document:{
+        type:[
+            {
+                name:String,
+                reference:String
+            }
+        ]
+    },
     pets:{
         type:[
             {
@@ -34,6 +42,9 @@ const schema = new mongoose.Schema({
             }
         ],
         default:[]
+    },
+    last_connection:{
+        type:String
     }
 })
 
