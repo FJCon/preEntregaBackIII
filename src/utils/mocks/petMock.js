@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker';
+import {addLogger, logger } from '../logger.js'
 
 const petsGenerator = (quantity) => {
     const pets = [];
@@ -38,7 +39,7 @@ const petsGenerator = (quantity) => {
         pets.push(pet);
     }
 
-    console.log('Mascotas generadas:', pets);
+    logger.info('Mascotas generadas:', pets);
     return pets;
 };
 
