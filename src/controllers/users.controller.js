@@ -1,5 +1,4 @@
-import multer from 'multer';
-import { upload } from './utils/multerConfig';
+import upload from '../utils/multerConfig.js';
 import { usersService } from "../services/index.js"
 
 const getAllUsers = async(req,res)=>{
@@ -43,7 +42,7 @@ const uploadFile = async(req,res)=>{
             path: req.file.path
           });
           await user.save();
-    
+            
           res.json({ message: 'Archivo subido correctamente' });
         });
       } catch (err) {

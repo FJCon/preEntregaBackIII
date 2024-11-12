@@ -8,7 +8,7 @@ router.get('/',usersController.getAllUsers);
 router.get('/:uid',usersController.getUser);
 router.put('/:uid',usersController.updateUser);
 router.delete('/:uid',usersController.deleteUser);
-router.post('/:uid/documents',usersController.uploadFile)
 
+router.post('/:uid/documents',usersController.uploadFile)
 
 export default router;

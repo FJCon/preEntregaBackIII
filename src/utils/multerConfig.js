@@ -1,6 +1,5 @@
-const multer = require('multer');
-const path = require('path');
-const User = require('../models/User');
+import multer from 'multer';
+import path from 'path';
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -14,3 +13,5 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+
+export default upload
