@@ -8,16 +8,6 @@ import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUiExpress from 'swagger-ui-express';
 import swaggerOptions from './utils/swagger.js';
 
-
-/*
-import usersRouter from './routes/users.router.js';
-import petsRouter from './routes/pets.router.js';
-import adoptionsRouter from './routes/adoption.router.js';
-import sessionsRouter from './routes/sessions.router.js';
-import mocksRouter from './routes/mocks.router.js'
-*/
-
-
 const app = express();
 config();
 
