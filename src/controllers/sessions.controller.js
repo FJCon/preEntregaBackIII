@@ -34,6 +34,9 @@ const login = async (req, res) => {
     const userDto = UserDTO.getUserTokenFrom(user);
     const token = jwt.sign(userDto,'tokenSecretJWT',{expiresIn:"1h"});
     res.cookie('coderCookie',token,{maxAge:3600000}).send({status:"success",message:"Logged in"})
+    const lastLogin = new Date()
+    lastLogin = toString(lastLogin)
+    await usersService.update(user._id,{last_connection: lastLogin}) // Actualizar ultima conexion
 }
 
 const current = async(req,res) =>{
