@@ -1,3 +1,5 @@
+import multer from 'multer';
+import { upload } from './utils/multerConfig';
 import { usersService } from "../services/index.js"
 
 const getAllUsers = async(req,res)=>{
@@ -27,9 +29,34 @@ const deleteUser = async(req,res) =>{
     res.send({status:"success",message:"User deleted"})
 }
 
+const uploadFile = async(req,res)=>{
+    const userId = req.params.uid;
+    try {
+        upload.single('file')(req, res, async (err) => {
+          if (err) {
+            return res.status(500).json({ error: err.message });
+          }
+    
+          const user = await User.findById(userId);
+          user.documents.push({
+            name: req.file.originalname,
+            path: req.file.path
+          });
+          await user.save();
+    
+          res.json({ message: 'Archivo subido correctamente' });
+        });
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error al subir el archivo' });
+      }
+
+}
+
 export default {
     deleteUser,
     getAllUsers,
     getUser,
-    updateUser
+    updateUser,
+    uploadFile
 }
