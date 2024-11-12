@@ -49,7 +49,7 @@ paths:
           type: string
       responses:
         "200":
-          description: Usuarios encontrado satisfactoriamente desde la base de datos
+          description: Usuario encontrado satisfactoriamente desde la base de datos
           content: 
             application/json:
               schema:
