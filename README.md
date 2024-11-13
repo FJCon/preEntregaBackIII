@@ -10,8 +10,8 @@ docker pull fjcon/entrega-final-backend3
 
 Para construir y ejecutar la imagen localmente:
 ```bash
-docker build -t adoptmeimage .
-docker run -p 8080:8080 adoptmeimage
+docker build -t entrega-final-backend3 .
+docker run -p 8080:8080 entrega-final-backend3
 ```
 
 ## Link a la Imagen en Docker Hub
