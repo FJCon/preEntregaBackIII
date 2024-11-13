@@ -4,7 +4,15 @@ Adoptme API es un proyecto backend que permite a usuarios interactuar con endpoi
 
 ## Dockerización
 La imagen de Docker para esta API está disponible en Docker Hub y puede descargarse con el siguiente comando:
-
-```bash
-docker pull fjcon/entrega-final-backend3:tagname
 ```
+docker pull fjcon/entrega-final-backend3
+```
+
+Para construir y ejecutar la imagen localmente:
+```bash
+docker build -t adoptmeimage .
+docker run -p 8080:8080 adoptmeimage
+```
+
+## Link a la Imagen en Docker Hub
+[Adoptme API en Docker Hub](https://hub.docker.com/r/fjcon/entrega-final-backend3)
